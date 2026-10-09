@@ -94,50 +94,58 @@ export default function SiteLayout() {
 
       <footer id="contact" className="site-footer">
         <div className="container footer-grid">
-          <div>
+          <div className="footer-column footer-brand-column">
             <p className="brand-footer">{site.name}</p>
             <p className="footer-copy">Hair and beauty salon.</p>
           </div>
 
-          <div>
+          <div className="footer-column">
             <h2 className="footer-title">Visit</h2>
-            {site.address ? <p className="footer-copy">{site.address}</p> : null}
-            <a href={site.mapsUrl} className="inline-link" target="_blank" rel="noreferrer">
-              Find us on Google Maps
-            </a>
+            <div className="footer-links">
+              {site.address ? <p className="footer-copy">{site.address}</p> : null}
+              {site.mapsUrl ? (
+                <a href={site.mapsUrl} className="inline-link" target="_blank" rel="noreferrer">
+                  Find us on Google Maps
+                </a>
+              ) : null}
+            </div>
           </div>
 
-          <div>
+          <div className="footer-column">
             <h2 className="footer-title">Contact</h2>
-            {site.whatsapp ? (
-              <a href={`https://wa.me/${site.whatsapp}?text=${encodeURIComponent(site.enquiryMessage)}`} className="inline-link" target="_blank" rel="noreferrer">
-                WhatsApp the salon
-              </a>
-            ) : null}
-            {site.phone ? (
-              <a href={`tel:${site.phone}`} className="inline-link">
-                {site.phone}
-              </a>
-            ) : (
-              <p className="footer-copy">Message the salon on Instagram or Facebook.</p>
-            )}
-            {site.hours && site.hours.length > 0 ? (
-              <ul className="detail-list footer-hours">
-                {site.hours.map((entry) => (
-                  <li key={entry}>{entry}</li>
-                ))}
-              </ul>
-            ) : null}
+            <div className="footer-links">
+              {site.whatsapp ? (
+                <a href={`https://wa.me/${site.whatsapp}?text=${encodeURIComponent(site.enquiryMessage)}`} className="inline-link" target="_blank" rel="noreferrer">
+                  WhatsApp the salon
+                </a>
+              ) : null}
+              {site.phone ? (
+                <a href={`tel:${site.phone}`} className="inline-link">
+                  {site.phone}
+                </a>
+              ) : (
+                <p className="footer-copy">Message the salon on Instagram or Facebook.</p>
+              )}
+              {site.hours && site.hours.length > 0 ? (
+                <ul className="detail-list footer-hours">
+                  {site.hours.map((entry) => (
+                    <li key={entry}>{entry}</li>
+                  ))}
+                </ul>
+              ) : null}
+            </div>
           </div>
 
-          <div>
+          <div className="footer-column">
             <h2 className="footer-title">Follow</h2>
-            <a href={site.instagram} className="inline-link" target="_blank" rel="noreferrer">
-              Instagram
-            </a>
-            <a href={site.facebook} className="inline-link" target="_blank" rel="noreferrer">
-              Facebook
-            </a>
+            <div className="footer-links">
+              <a href={site.instagram} className="inline-link" target="_blank" rel="noreferrer">
+                Instagram
+              </a>
+              <a href={site.facebook} className="inline-link" target="_blank" rel="noreferrer">
+                Facebook
+              </a>
+            </div>
           </div>
         </div>
 

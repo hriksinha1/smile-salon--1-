@@ -8,6 +8,7 @@ export default function AboutPage() {
         eyebrow="About"
         title="Smile Hair and Beauty is a hair and beauty salon."
         intro="The space is designed to feel polished, relaxed and easy to visit. If you’re planning a service, it’s best to enquire first so the salon can help match you to the right appointment and treatment options."
+        imageId="salon-interior"
       >
         <Button to="/services" variant="primary">
           Explore services

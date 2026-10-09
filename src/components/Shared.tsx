@@ -52,21 +52,29 @@ export function PageHero({
   title,
   intro,
   children,
+  imageId,
 }: {
   eyebrow?: string
   title: string
   intro?: string
   children?: ReactNode
+  imageId?: string
 }) {
   return (
     <section className="section page-hero">
-      <div className="container grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
+      <div className="container hero-grid page-hero-grid">
         <div>
           {eyebrow ? <p className="eyebrow">{eyebrow}</p> : null}
           <h1 className="display">{title}</h1>
           {intro ? <p className="lead">{intro}</p> : null}
           {children ? <div className="mt-6 flex flex-wrap gap-3">{children}</div> : null}
         </div>
+
+        {imageId ? (
+          <div className="page-hero-media-wrap">
+            <Picture id={imageId} className="page-hero-media" />
+          </div>
+        ) : null}
       </div>
     </section>
   )

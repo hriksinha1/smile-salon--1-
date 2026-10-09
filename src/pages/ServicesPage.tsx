@@ -9,6 +9,7 @@ export default function ServicesPage() {
         eyebrow="Services"
         title="Hair and beauty services, tailored to what you want."
         intro="The salon offers a broad range of hair and beauty services. If you’d like to discuss a treatment, use the contact options below and the team can confirm the details with you."
+        imageId="service-hair"
       >
         <Button to="/contact" variant="primary">
           Enquire about a service

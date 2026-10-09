@@ -211,27 +211,35 @@ p {
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  min-height: 48px;
+  min-height: 52px;
   padding: 0 1.5rem;
-  border-radius: 2px;
+  border-radius: 999px;
   border: 1px solid transparent;
   font-size: var(--text-button);
-  font-weight: 600;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  box-shadow: 0 12px 24px rgba(48, 39, 37, 0.08);
+}
+
+.btn:hover,
+.btn:focus-visible {
+  transform: translateY(-1px);
 }
 
 .btn-primary {
-  background: var(--color-berry);
+  background: linear-gradient(135deg, var(--color-berry) 0%, var(--color-berry-strong) 100%);
   color: var(--color-ivory);
+  box-shadow: 0 16px 30px rgba(138, 80, 93, 0.18);
 }
 
 .btn-primary:hover,
 .btn-primary:focus-visible {
-  background: var(--color-berry-strong);
+  background: linear-gradient(135deg, var(--color-berry-strong) 0%, #5f3943 100%);
 }
 
 .btn-secondary {
-  border-color: rgba(48, 39, 37, 0.3);
-  background: transparent;
+  border-color: rgba(48, 39, 37, 0.22);
+  background: rgba(255, 255, 255, 0.42);
   color: var(--color-text);
 }
 
@@ -647,7 +655,7 @@ p {
 }
 
 .site-footer {
-  background: var(--color-espresso);
+  background: linear-gradient(180deg, #241f1d 0%, var(--color-espresso) 100%);
   color: var(--color-ivory);
   padding-block: 3rem 2rem;
 }
@@ -657,16 +665,27 @@ p {
   gap: 2rem;
 }
 
+.footer-column {
+  display: grid;
+  align-content: start;
+  gap: 0.9rem;
+}
+
+.footer-links {
+  display: grid;
+  gap: 0.6rem;
+}
+
 .brand-footer {
   font-family: var(--font-display);
   font-size: clamp(1.5rem, 2vw, 2rem);
-  margin-bottom: 0.6rem;
+  margin-bottom: 0;
 }
 
 .footer-title {
   font-family: var(--font-display);
   font-size: 1.15rem;
-  margin: 0 0 0.9rem;
+  margin: 0;
   color: var(--color-champagne);
 }
 
@@ -678,11 +697,13 @@ p {
 
 .footer-hours {
   padding-left: 0;
-  margin-top: 0.5rem;
+  margin-top: 0.2rem;
 }
 
 .footer-meta {
   margin-top: 2rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid rgba(250, 246, 241, 0.12);
   color: rgba(250, 246, 241, 0.72);
 }
 
@@ -692,6 +713,27 @@ p {
 }
 
 .page-hero .container {
+  display: block;
+}
+
+.page-hero-grid {
+  display: grid;
+  gap: clamp(1.5rem, 2.5vw, 2.5rem);
+}
+
+.page-hero-media-wrap {
+  position: relative;
+  overflow: hidden;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.24);
+  border: 1px solid var(--color-border);
+  box-shadow: 0 24px 60px rgba(48, 39, 37, 0.08);
+}
+
+.page-hero-media {
+  width: 100%;
+  height: min(26rem, 60vw);
+  object-fit: cover;
   display: block;
 }
 

@@ -11,6 +11,7 @@ export default function ContactPage() {
         eyebrow="Contact"
         title="Get in touch and ask about your next appointment."
         intro="Reach out in the way that suits you best. The salon can confirm availability and next steps before anything is booked."
+        imageId="salon-interior"
       >
         {whatsappUrl ? (
           <Button href={whatsappUrl} target="_blank" rel="noreferrer" variant="primary">
