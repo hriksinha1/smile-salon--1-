@@ -21,7 +21,7 @@ export default function SiteLayout() {
         window.scrollTo({ top, behavior: 'smooth' })
       }
     } else {
-      window.scrollTo({ top: 0, behavior: 'instant' as ScrollBehavior })
+      window.scrollTo({ top: 0, behavior: 'auto' })
     }
 
     if (main) {

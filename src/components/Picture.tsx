@@ -39,7 +39,7 @@ export default function Picture({
         alt={img.alt}
         loading={eager ? 'eager' : 'lazy'}
         decoding="async"
-        fetchPriority={eager ? 'high' : undefined}
+        {...(eager ? { fetchpriority: 'high' } : {})}
         onError={() => setFailed(true)}
         className={className}
         style={{
